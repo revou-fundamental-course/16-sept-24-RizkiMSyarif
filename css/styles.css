@@ -35,9 +35,27 @@ nav>a {
 }
 
 .profil-icon {
-    height: 50px;
-    width: 50px;
-    background-image: url(../assets/Logo-Imev.jpg);
+    height: 120px;
+    width: 120px;
+    background-image: url(../assets/Profil\ 1.JPG);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.profil-icon1 {
+    height: 120px;
+    width: 120px;
+    background-image: url(../assets/Profil\ 2.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.profil-icon2 {
+    height: 120px;
+    width: 120px;
+    background-image: url(../assets/Profil\ 3.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 50%;
