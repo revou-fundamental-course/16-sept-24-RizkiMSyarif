@@ -18,11 +18,11 @@ nav>a {
 
 .logo-icon {
     height: 50px;
-    width: 185px;
-    background-image: url(../assets/Logo-Imev.jpg);
+    width: 145px;
+    background-image: url(../assets/RMS.jpg);
     background-size: cover;
     background-position: center;
-    border-radius: 0%;
+    border-radius: 50%;
 }
 
 .photo-banner {
