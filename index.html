@@ -25,11 +25,10 @@
     <main>
         <!-- Home -->    
         <section id="section-home">
-            <header>
+            <body>
                 <h1>Hai <span id="nama">Rizki</span>, Welcome to My Website</h1>
-                <script src="js/script.js"></script>
-                <button id="tombol">Ganti nama</button>
-            </header>
+                <!-- <button id="tombol">Ganti nama</button> -->
+            </body>
              
             <article>
                 <p>lorem isum blablabla</p>
@@ -78,9 +77,14 @@
 
         <!-- Massage Us -->   
         <section id="section-message-us">
-            <header></header>
+            <body>
                 <h1>Message Us</h1>
-            </header>
+
+                <input required type="text" placeholder="nama anda" id="name-input">
+                <button id="submit">Kirim</button>
+                <p id="error-name"></p>
+                
+            </body>
 
             <section>
                 <!-- Form -->  
@@ -97,5 +101,6 @@
     <footer>
         <p><h6>Made by RizkiMSyarif@2024</h6></p>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
