@@ -14,8 +14,8 @@
         <!-- Navigation Bar -->  
         <nav>
             <a href="#section-home">Home</a>
-            <a href="#section-our-profil">Our Profil</a>
-            <a href="#section-portofolio">Portofolio</a>
+            <a href="#section-company-founder-profile">Company Founder Profile</a>
+            <a href="#section-company-profile">Company Profil</a>
             <a href="#section-message-us">Message Us</a>
         </nav>
     </header>
@@ -26,7 +26,7 @@
         <!-- Home -->    
         <section id="section-home">
             <body>
-                <h1>Hai <span id="nama">Rizki</span>, Welcome to My Website</h1>
+                <h1>Hai <span id="name">Rizki</span>, Welcome to My Website</h1>
                 <!-- <button id="tombol">Ganti nama</button> -->
             </body>
              
@@ -40,60 +40,82 @@
 
         <hr />
 
-        <!-- Our Profile -->   
-        <section id="section-our-profil">
+        <!-- Company Founder Profile -->   
+        <section id="section-company-founder-profile">
             <header>
-                <h1>Our Profil</h1>
+                <h1>Company Founder Profile</h1>
             </header>
 
             <div class="profil-icon-container">
                 <div>
                     <div class="profil-icon"></div>
-                    <h4>Profil 1</h4>
+                    <h4>Rizki Muhammad Syarif</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus consectetur quod distinctio, fugit maxime nesciunt doloremque adipisci vero nihil saepe velit vitae autem dolores rem, officiis fugiat dolor ducimus similique.</p>
                 </div>
     
                 <div>
                     <div class="profil-icon1"></div>
-                    <h4>Profil 2</h4>
+                    <h4>Firman Febrianto Asmoro</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, minima ab! Dicta ducimus unde, illum corporis corrupti sapiente maxime quo qui, sit harum cum suscipit dolores officiis a explicabo consequatur!</p>
                 </div>
     
                 <div>
                     <div class="profil-icon2"></div>
-                    <h4>Profil 3</h4>
+                    <h4>Reyza Putra Nareswara</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, ratione vel. Saepe optio quis praesentium velit expedita soluta tempora qui iste, natus quas dicta totam accusamus tempore obcaecati deserunt eaque.</p>
                 </div>
             </div>
         </section>
 
         <hr />
 
-        <!-- Portofolio -->   
-        <section id="section-portofolio">
+        <!-- Company profile -->   
+        <section id="section-company-profile">
             <header></header>
-                <h1>Portofolio</h1>
+                <h1>Company profile</h1>
             </header>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nostrum exercitationem quisquam? Ut odio fugit voluptatem quod numquam quaerat alias totam consectetur dolore accusantium ab tempore optio, deserunt inventore voluptas.</p>
         </section>
 
         <hr />
 
         <!-- Massage Us -->   
         <section id="section-message-us">
-            <body>
-                <h1>Message Us</h1>
-
-                <input required type="text" placeholder="nama anda" id="name-input">
-                <button id="submit">Kirim</button>
-                <p id="error-name"></p>
-                
-            </body>
-
-            <section>
-                <!-- Form -->  
-                <form></form>
-
-                 <!-- Result Form -->  
-                <div></div>
-            </section>
-        </section>
+            <h1>Message Us</h1>
+            <hr />
+            <div class="container-message-us">
+                <form onsubmit="return handleSubmit(event)">
+                    <label for="name">Nama</label><br>
+                    <input type="text" id="name" placeholder="Nama"><br>
+                    <p id="error-name"></p>
+    
+                    <label for="birthday-date">Tanggal Lahir</label><br>
+                    <input type="date" id="birthday-date"><br>
+                    <p id="error-birthday-date"></p>
+    
+                    <label>Jenis Kelamin</label><br>
+                    <input type="radio" id="male" name="gender" value="Laki-laki">
+                    <label for="male">Laki-Laki</label>
+                    <input type="radio" id="female" name="gender" value="Perempuan">
+                    <label for="female">Perempuan</label>
+                    <p id="error-gender"></p>
+    
+                    <label for="message">Pesan</label><br>
+                    <textarea id="message" placeholder="Pesan"></textarea><br>
+                    <p id="error-message"></p>
+    
+                    <input type="submit" value="Kirim Pesan" class="btn-submit">
+                </form>
+    
+                <div class="output-form">
+                    <h2>Waktu saat ini: <span id="current-time"></span></h2>
+                    <p>Nama: <span id="sender-full-name"></span></p>
+                    <p>Tanggal Lahir: <span id="sender-birthday-date"></span></p>
+                    <p>Jenis Kelamin: <span id="sender-full-gender"></span></p>
+                    <p>Pesan: <span id="sender-full-message"></span></p>
+                </div>
+            </div>
+        </section>      
     </main>
 
     <hr />
