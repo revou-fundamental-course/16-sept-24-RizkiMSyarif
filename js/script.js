@@ -1,33 +1,40 @@
+// Function to handle form submission
 function handleSubmit(event) {
     event.preventDefault();
 
-    // Ambil nilai dari input form
-    const name = document.getElementById("name").value.trim();
-    const birthdayDate = document.getElementById("birthday-date").value;
-    const genderMale = document.getElementById("male").checked;
-    const genderFemale = document.getElementById("female").checked;
-    const message = document.getElementById("message").value.trim();
+    // Get form values
+    const name = document.getElementById('name').value;
+    const birthdayDate = document.getElementById('birthday-date').value;
+    const gender = document.querySelector('input[name="gender"]:checked').value;
+    const message = document.getElementById('message').value;
 
-    // Ambil elemen output untuk ditampilkan
-    const outputName = document.getElementById("sender-full-name");
-    const outputBirthdayDate = document.getElementById("sender-birthday-date");
-    const outputGender = document.getElementById("sender-full-gender");
-    const outputMessage = document.getElementById("sender-full-message");
-    const currentTime = document.getElementById("current-time");
+    // Update output elements
+    document.getElementById('sender-full-name').textContent = name;
+    document.getElementById('sender-birthday-date').textContent = birthdayDate;
+    document.getElementById('sender-full-gender').textContent = gender;
+    document.getElementById('sender-full-message').textContent = message;
 
-    // Set waktu sekarang
-    const now = new Date();
-    currentTime.textContent = now.toString();
+    // Update current time
+    updateCurrentTime();
 
-    // Validasi input
-    if (!name || !birthdayDate || (!genderMale && !genderFemale) || !message) {
-        alert("Semua field harus diisi.");
-        return;
-    }
+    // Clear form fields
+    document.getElementById('messageForm').reset();
 
-    // Set hasil output
-    outputName.textContent = name;
-    outputBirthdayDate.textContent = birthdayDate;
-    outputGender.textContent = genderMale ? "Laki-laki" : "Perempuan";
-    outputMessage.textContent = message;
+    return false;
 }
+
+// Function to update current time
+function updateCurrentTime() {
+    const now = new Date();
+    const timeString = now.toLocaleTimeString();
+    document.getElementById('current-time').textContent = timeString;
+}
+
+// Update time every second
+setInterval(updateCurrentTime, 1000);
+
+// Initial time update
+updateCurrentTime();
+
+// Add event listener to the form
+document.getElementById('messageForm').addEventListener('submit', handleSubmit);

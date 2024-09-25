@@ -82,40 +82,35 @@
         <!-- Massage Us -->   
         <section id="section-message-us">
             <h1>Message Us</h1>
-            <hr />
             <div class="container-message-us">
-                <form onsubmit="return handleSubmit(event)">
-                    <label for="name">Nama</label><br>
-                    <input type="text" id="name" placeholder="Nama"><br>
-                    <p id="error-name"></p>
+                <form id="messageForm" onsubmit="return handleSubmit(event)">
+                    <label for="name">Nama:</label><br>
+                    <input type="text" id="name" placeholder="Nama" required><br><br>
     
-                    <label for="birthday-date">Tanggal Lahir</label><br>
-                    <input type="date" id="birthday-date"><br>
-                    <p id="error-birthday-date"></p>
+                    <label for="birthday-date">Tanggal Lahir:</label><br>
+                    <input type="date" id="birthday-date" required><br><br>
     
-                    <label>Jenis Kelamin</label><br>
-                    <input type="radio" id="male" name="gender" value="Laki-laki">
-                    <label for="male">Laki-Laki</label>
+                    <label>Jenis Kelamin:</label><br>
+                    <input type="radio" id="male" name="gender" value="Laki-laki" required>
+                    <label for="male">Laki-laki</label>
                     <input type="radio" id="female" name="gender" value="Perempuan">
-                    <label for="female">Perempuan</label>
-                    <p id="error-gender"></p>
+                    <label for="female">Perempuan</label><br><br>
     
-                    <label for="message">Pesan</label><br>
-                    <textarea id="message" placeholder="Pesan"></textarea><br>
-                    <p id="error-message"></p>
+                    <label for="message">Pesan:</label><br>
+                    <textarea id="message" placeholder="Pesan" required></textarea><br><br>
     
-                    <input type="submit" value="Kirim Pesan" class="btn-submit">
+                    <input type="submit" value="Submit" class="btn-submit">
                 </form>
-    
+                
                 <div class="output-form">
-                    <h2>Waktu saat ini: <span id="current-time"></span></h2>
+                    <h2>Current Time: <span id="current-time"></span></h2>
                     <p>Nama: <span id="sender-full-name"></span></p>
                     <p>Tanggal Lahir: <span id="sender-birthday-date"></span></p>
                     <p>Jenis Kelamin: <span id="sender-full-gender"></span></p>
                     <p>Pesan: <span id="sender-full-message"></span></p>
                 </div>
             </div>
-        </section>      
+        </section>    
     </main>
 
     <hr />
